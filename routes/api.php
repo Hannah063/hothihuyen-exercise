@@ -4,6 +4,7 @@ use App\Http\Controllers\PersonController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,7 @@ use App\Http\Controllers\PostController;
 
 Route::get('/people', [PersonController::class, 'getInfo']);
 Route::get('/posts', [PostController::class, 'getPost']);
+
+Route::get('/students', [StudentController::class, 'getAll']);
+Route::put('/students', [StudentController::class, 'update']);
+Route::delete('/students', [StudentController::class, 'delete']);
